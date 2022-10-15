@@ -1,0 +1,10 @@
+import json
+from config import base_url
+import requests
+def lambda_handler(event, context):
+    # TODO implement
+    res = requests.get(url=base_url+'todos/1')
+    return {
+        'statusCode': res.status_code,
+        'body': res.json()
+    }
